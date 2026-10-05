@@ -1,0 +1,45 @@
+import java.awt.Dimension;
+import java.awt.Image;
+import java.awt.Toolkit;
+import javax.swing.*;
+
+public class Screen
+{
+    private static final int width = int
+    private static final int length
+    private boolean mouseselect
+    private int box1
+    private int box2
+
+    public Screen
+    { 
+        width = 900;
+        height = 600;
+        mouseselect = true
+    }
+
+            public Class Cup
+        {
+            public int cupType
+            public int base
+            public int syrup
+            public int topping
+
+            public Cup
+            {
+                cupType = 0;
+                base = 0;
+                syrup = 0;
+                topping = 0;
+            }
+
+            public int chooseCup()
+            if (mouseselect = box1) {
+                cupType = 1
+            }
+            if (mouseselect)
+
+        }
+
+}
+
