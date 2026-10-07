@@ -1,5 +1,4 @@
 import java.awt.*;
-
 import javax.swing.*;
 import java.io.*;
 import java.awt.event.ActionEvent;
@@ -63,39 +62,51 @@ public class Barista
 
             public void draw() {
                 if (baseType == 1) {
-                Cup = cupB1.makevisible();
+                cupB1.makevisible();
                 }
                 if (baseType == 2) {
-                Cup = cupB2.makevisible();
+                cupB2.makevisible();
                 }
                 if (baseType == 1 && syrupType == 1) {
-                Cup = cupB1S1.makevisible();
+                cupB1S1.makevisible();
                 }
                 if (baseType == 2 && syrupType == 1) {
-                Cup = cupB2S1.makevisible();
+                cupB2S1.makevisible();
                 }
                 if (baseType == 1 && syrupType == 2) {
-                Cup = cupB1S2.makevisible();
+                cupB1S2.makevisible();
                 }
                 if (baseType == 2 && syrupType == 2) {
-                Cup = cupB2S2.makevisible();
+                cupB2S2.makevisible();
                 }
                 if (baseType == 1 && syrupType == 1 && toppingType == 1) {
-                Cup = cupB1S1T1.makevisible();
+                cupB1S1T1.makevisible();
                 }
-                if (baseType == 2 && syrupType == 1 && toppingType == 1) {
-                Cup = cupB2S1T1.makevisible();
+                if (baseType == 1 && syrupType == 2 && toppingType == 1) {
+                cupB1S2T1.makevisible();
+                }
+                if (baseType == 1 && syrupType == 2 && toppingType == 2) {
+                cupB1S2T2.makevisible();
+                }
+                if (baseType == 2 && syrupType == 1 && toppingType == 2) {
+                cupB2S1T2.makevisible();
+                }
+                if (baseType == 2 && syrupType == 2 && toppingType == 1) {
+                cupB2S2T1.makevisible();
+                }
+                if (baseType == 2 && syrupType == 2 && toppingType == 2) {
+                cupB2S2T2.makevisible();
                 }
 
             }
 
             public void pickUpCup() {
-                if (mouseselect == cup) {
+                if (mouseselect == Cup||CupB1||cupB2||cupB1S1||cupB1S2||cupB2S1||cupB2S2||cupB1S1T1||cupB1S2T1||cupB1S2T2||cupB2S1T2||cupB2S2T1||cupB2S2T2) {
                     holdingCup = true;
                 }
                     if (key.press == "F") {
                         holdingCup = false;
-                        movedown
+                        movedown.speed = ("gravity equation");
                     }
             }
 
@@ -141,5 +152,4 @@ public class Barista
 
 
         }
-
 }
