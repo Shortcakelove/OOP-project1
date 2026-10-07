@@ -29,6 +29,9 @@ public class Barista
         Image cupB1S2T2 = new ImageIcon(whichever image i plan to use);
         Image cupB2S2T1 = new ImageIcon(whichever image i plan to use);
         Image cupB2S2T2 = new ImageIcon(whichever image i plan to use);
+        Image cupB2S1T1 = new ImageIcon(whichever image i plan to use);
+        Image cupB2S1T2 = new ImageIcon(whichever image i plan to use);
+
         
        }   
 
@@ -61,47 +64,53 @@ public class Barista
 
 
             public void draw() {
-                if (baseType == 1) {
-                cupB1.makevisible();
-                }
-                if (baseType == 2) {
-                cupB2.makevisible();
-                }
-                if (baseType == 1 && syrupType == 1) {
-                cupB1S1.makevisible();
-                }
-                if (baseType == 2 && syrupType == 1) {
-                cupB2S1.makevisible();
-                }
-                if (baseType == 1 && syrupType == 2) {
-                cupB1S2.makevisible();
-                }
-                if (baseType == 2 && syrupType == 2) {
-                cupB2S2.makevisible();
-                }
-                if (baseType == 1 && syrupType == 1 && toppingType == 1) {
-                cupB1S1T1.makevisible();
-                }
-                if (baseType == 1 && syrupType == 2 && toppingType == 1) {
-                cupB1S2T1.makevisible();
-                }
-                if (baseType == 1 && syrupType == 2 && toppingType == 2) {
-                cupB1S2T2.makevisible();
-                }
-                if (baseType == 2 && syrupType == 1 && toppingType == 2) {
-                cupB2S1T2.makevisible();
-                }
-                if (baseType == 2 && syrupType == 2 && toppingType == 1) {
-                cupB2S2T1.makevisible();
-                }
-                if (baseType == 2 && syrupType == 2 && toppingType == 2) {
-                cupB2S2T2.makevisible();
-                }
-
+                Cup.makevisible();
+                    if (baseType == 1) {
+                    cupB1.makevisible();
+                    }
+                    if (baseType == 2) {
+                    cupB2.makevisible();
+                    }
+                    if (baseType == 1 && syrupType == 1) {
+                    cupB1S1.makevisible();
+                    }
+                    if (baseType == 2 && syrupType == 1) {
+                    cupB2S1.makevisible();
+                    }
+                    if (baseType == 1 && syrupType == 2) {
+                    cupB1S2.makevisible();
+                    }
+                    if (baseType == 2 && syrupType == 2) {
+                    cupB2S2.makevisible();
+                    }
+                    if (baseType == 1 && syrupType == 1 && toppingType == 1) {
+                    cupB1S1T1.makevisible();
+                    }
+                    if (baseType == 1 && syrupType == 2 && toppingType == 1) {
+                    cupB1S2T1.makevisible();
+                    }
+                    if (baseType == 1 && syrupType == 1 && toppingType == 2) {
+                    cupB1S1T2.makevisible();
+                    }
+                    if (baseType == 1 && syrupType == 2 && toppingType == 2) {
+                    cupB1S2T2.makevisible();
+                    }
+                    if (baseType == 2 && syrupType == 1 && toppingType == 2) {
+                    cupB2S1T2.makevisible();
+                    }
+                    if (baseType == 2 && syrupType == 1 && toppingType == 1) {
+                    cupB2S1T1.makevisible();
+                    }
+                    if (baseType == 2 && syrupType == 2 && toppingType == 1) {
+                    cupB2S2T1.makevisible();
+                    }
+                    if (baseType == 2 && syrupType == 2 && toppingType == 2) {
+                    cupB2S2T2.makevisible();
+                    }
             }
 
             public void pickUpCup() {
-                if (mouseselect == Cup||CupB1||cupB2||cupB1S1||cupB1S2||cupB2S1||cupB2S2||cupB1S1T1||cupB1S2T1||cupB1S2T2||cupB2S1T2||cupB2S2T1||cupB2S2T2) {
+                if (mouseselect == Cup||CupB1||cupB2||cupB1S1||cupB1S2||cupB2S1||cupB2S2||cupB1S1T1||cupB1S2T1||cupB1S2T2||cupB1T1T2||cupB2S1T2||cupB2S2T1||cupB2S2T2||cupB2S1T1) {
                     holdingCup = true;
                 }
                     if (key.press == "F") {
