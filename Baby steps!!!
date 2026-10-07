@@ -1,47 +1,145 @@
-import java.awt.Dimension;
 import java.awt.*;
-import java.awt.Toolkit;
+
 import javax.swing.*;
-import javax.swing.JComponent;
 import java.io.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 
 public class Barista
 {
 
 
-    Public static void main(String[] args)
+    public static void main(String[] args)
     { 
         JFrame frame = new Jframe();
-        drawRect(0, 0, 500, 300)
+        drawRect(0, 0, 500, 300);
         frame.setSize(500, 600);
         frame.setLayout(null);
         frame.setVisible(true);
-    }   
+        Image Cup = new ImageIcon(whichever image i plan to use);
+        Image cupB1 = new ImageIcon(whichever image i plan to use);
+        Image cupB2 = new ImageIcon(whichever image i plan to use);
+        Image cupB1S1 = new ImageIcon(whichever image i plan to use);
+        Image cupB1S2 = new ImageIcon(whichever image i plan to use);
+        Image cupB2S1 = new ImageIcon(whichever image i plan to use);
+        Image cupB2S2 = new ImageIcon(whichever image i plan to use);
+        Image cupB1S1T1 = new ImageIcon(whichever image i plan to use);
+        Image cupB1S1T2 = new ImageIcon(whichever image i plan to use);
+        Image cupB1S2T1 = new ImageIcon(whichever image i plan to use);
+        Image cupB1S2T2 = new ImageIcon(whichever image i plan to use);
+        Image cupB2S2T1 = new ImageIcon(whichever image i plan to use);
+        Image cupB2S2T2 = new ImageIcon(whichever image i plan to use);
+        
+       }   
 
-            public Class Cup
+            public class Cup
         {
-            public int cupType
-            public int base
-            public int syrup
-            public int topping
+            public int baseType;
+            public int syrupType;
+            public int toppingType;
+            public boolean holdingCup;
+            public Point base1;
+            public Point base2;
+            public Point syrup1;
+            public Point syrup2;
+            public Point topping1;
+            public Point topping2;
+            public Point mouseselect;
 
-            public Cup
             {
-                cupType = 0;
-                base = 0;
-                syrup = 0;
-                topping = 0;
+                baseType = 0;
+                syrupType = 0;
+                toppingType = 0;
+                base1 = (60, 300);
+                base2 = (120, 300);
+                syrup1 = (180, 300);
+                syrup2 = (240, 300);
+                topping1 = (300, 300);
+                topping2 = (360, 300);
+                mouseselect = (0, 0);
             }
 
-            public int chooseCup()
-            if (mouseselect = box1) {
-                cupType = 1
+
+            public void draw() {
+                if (baseType == 1) {
+                Cup = cupB1.makevisible();
+                }
+                if (baseType == 2) {
+                Cup = cupB2.makevisible();
+                }
+                if (baseType == 1 && syrupType == 1) {
+                Cup = cupB1S1.makevisible();
+                }
+                if (baseType == 2 && syrupType == 1) {
+                Cup = cupB2S1.makevisible();
+                }
+                if (baseType == 1 && syrupType == 2) {
+                Cup = cupB1S2.makevisible();
+                }
+                if (baseType == 2 && syrupType == 2) {
+                Cup = cupB2S2.makevisible();
+                }
+                if (baseType == 1 && syrupType == 1 && toppingType == 1) {
+                Cup = cupB1S1T1.makevisible();
+                }
+                if (baseType == 2 && syrupType == 1 && toppingType == 1) {
+                Cup = cupB2S1T1.makevisible();
+                }
+
             }
-            if (mouseselect)
+
+            public void pickUpCup() {
+                if (mouseselect == cup) {
+                    holdingCup = true;
+                }
+                    if (key.press == "F") {
+                        holdingCup = false;
+                        movedown
+                    }
+            }
+
+            public void chooseBase() {
+                if (mouseselect == base1 && holdingCup == true) {
+                    baseType = 1;
+                    draw();
+                }
+                if (mouseselect() == base2) {
+                    baseType = 2;
+                    draw();
+                }
+            }
+
+            public void chooseSyrup() {
+                if (mouseselect == syrup1) {
+                    syrupType = 1;
+                    draw();
+                }
+                if (mouseselect() == syrup2) {
+                    syrupType = 2;
+                    draw();
+                }
+            }
+           
+            public void chooseTopping() {
+                if (mouseselect == topping1) {
+                    toppingType = 1;
+                    draw();
+                }
+                if (mouseselect == topping2) {
+                    toppingType = 2;
+                    draw();
+                }
+            }
+            
+
+            public void clear() {
+                if (mouseselct == trashbin || send && toppingType != 0) {
+                    cup.makeinvisible();
+                }
+            }
+
 
         }
 
 }
-
-}
-
