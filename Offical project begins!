@@ -1,164 +1,215 @@
 import java.awt.*;
+import java.awt.event.*;
 import javax.swing.*;
-import java.io.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
+public class Barista3 {
+    static ImageIcon Cup = new ImageIcon(new ImageIcon("BigBarista.java/Images2/Untitled_Artwork-1 (2).png").getImage().getScaledInstance(120, 120, Image.SCALE_SMOOTH));
+    static ImageIcon cupB1 = new ImageIcon(new ImageIcon("BigBarista.java/Images2/Untitled_Artwork-2 (2).png").getImage().getScaledInstance(120, 120, Image.SCALE_SMOOTH));
+    static ImageIcon cupB2 = new ImageIcon(new ImageIcon("BigBarista.java/Images2/Untitled_Artwork-4 (1).png").getImage().getScaledInstance(120, 120, Image.SCALE_SMOOTH));
+    static ImageIcon cupB1S1 = new ImageIcon(new ImageIcon("BigBarista.java/Images2/Untitled_Artwork-1 (1).png").getImage().getScaledInstance(120, 120, Image.SCALE_SMOOTH));
+    static ImageIcon cupB1S2 = new ImageIcon(new ImageIcon("BigBarista.java/Images2/Untitled_Artwork-3 (2).png").getImage().getScaledInstance(120, 120, Image.SCALE_SMOOTH));
+    static ImageIcon cupB2S1 = new ImageIcon(new ImageIcon("BigBarista.java/Images2/Untitled_Artwork-1.png").getImage().getScaledInstance(120, 120, Image.SCALE_SMOOTH));
+    static ImageIcon cupB2S2 = new ImageIcon(new ImageIcon("BigBarista.java/Images2/Untitled_Artwork-2.png").getImage().getScaledInstance(120, 120, Image.SCALE_SMOOTH));
+    static ImageIcon cupB1S1T1 = new ImageIcon(new ImageIcon("BigBarista.java/Images2/Untitled_Artwork-2 (1).png").getImage().getScaledInstance(120, 120, Image.SCALE_SMOOTH));
+    static ImageIcon cupB1S1T2 = new ImageIcon(new ImageIcon("BigBarista.java/Images2/Untitled_Artwork-3 (1).png").getImage().getScaledInstance(120, 120, Image.SCALE_SMOOTH));
+    static ImageIcon cupB1S2T1 = new ImageIcon(new ImageIcon("BigBarista.java/Images2/Untitled_Artwork-4 (2).png").getImage().getScaledInstance(120, 120, Image.SCALE_SMOOTH));
+    static ImageIcon cupB1S2T2 = new ImageIcon(new ImageIcon("BigBarista.java/Images2/Untitled_Artwork-5 (1).png").getImage().getScaledInstance(120, 120, Image.SCALE_SMOOTH));
+    static ImageIcon cupB2S1T1 = new ImageIcon(new ImageIcon("BigBarista.java/Images2/Untitled_Artwork-3.png").getImage().getScaledInstance(120, 120, Image.SCALE_SMOOTH));
+    static ImageIcon cupB2S1T2 = new ImageIcon(new ImageIcon("BigBarista.java/Images2/Untitled_Artwork-5.png").getImage().getScaledInstance(120, 120, Image.SCALE_SMOOTH));
+    static ImageIcon cupB2S2T1 = new ImageIcon(new ImageIcon("BigBarista.java/Images2/Untitled_Artwork-4.png").getImage().getScaledInstance(120, 120, Image.SCALE_SMOOTH));
+    static ImageIcon cupB2S2T2 = new ImageIcon(new ImageIcon("BigBarista.java/Images2/Untitled_Artwork-6.png").getImage().getScaledInstance(120, 120, Image.SCALE_SMOOTH));
 
-public class Barista
-{
+    static JFrame frame;
+    static JPanel panel;
+    static JLabel cupLabel;
+    static JLabel status;
 
+    public static void main(String[] args) {
 
-    public static void main(String[] args)
-    { 
-        JFrame frame = new Jframe();
-        drawRect(0, 0, 500, 300);
+        frame = new JFrame("Barista");
         frame.setSize(500, 600);
         frame.setLayout(null);
-        frame.setVisible(true);
-        Image Cup = new ImageIcon(whichever image i plan to use);
-        Image cupB1 = new ImageIcon(whichever image i plan to use);
-        Image cupB2 = new ImageIcon(whichever image i plan to use);
-        Image cupB1S1 = new ImageIcon(whichever image i plan to use);
-        Image cupB1S2 = new ImageIcon(whichever image i plan to use);
-        Image cupB2S1 = new ImageIcon(whichever image i plan to use);
-        Image cupB2S2 = new ImageIcon(whichever image i plan to use);
-        Image cupB1S1T1 = new ImageIcon(whichever image i plan to use);
-        Image cupB1S1T2 = new ImageIcon(whichever image i plan to use);
-        Image cupB1S2T1 = new ImageIcon(whichever image i plan to use);
-        Image cupB1S2T2 = new ImageIcon(whichever image i plan to use);
-        Image cupB2S2T1 = new ImageIcon(whichever image i plan to use);
-        Image cupB2S2T2 = new ImageIcon(whichever image i plan to use);
-        Image cupB2S1T1 = new ImageIcon(whichever image i plan to use);
-        Image cupB2S1T2 = new ImageIcon(whichever image i plan to use);
 
-        
-       }   
+        panel = new JPanel();
+        panel.setLayout(null);
+        panel.setBackground(new Color(230, 210, 180));
+        panel.setBounds(0, 0, 500, 600);
+        frame.add(panel);
 
-            public class Cup
-        {
+        status = new JLabel("Barista");
+        status.setBounds(20, 20, 450, 30);
+        status.setHorizontalAlignment(SwingConstants.CENTER);
+        panel.add(status);
+
+        cupLabel = new JLabel(Cup);
+        cupLabel.setBounds(190, 100, 120, 120);
+        panel.add(cupLabel);
+
+        JButton base1Button = new JButton("Regular");
+        base1Button.setBounds(40, 240, 100, 50);
+        panel.add(base1Button);
+
+        JButton base2Button = new JButton("Lavender");
+        base2Button.setBounds(150, 240, 100, 50);
+        panel.add(base2Button);
+
+        JButton syrup1Button = new JButton("Jojoba");
+        syrup1Button.setBounds(260, 240, 100, 50);
+        panel.add(syrup1Button);
+
+        JButton syrup2Button = new JButton("Sugarmie");
+        syrup2Button.setBounds(370, 240, 100, 50);
+        panel.add(syrup2Button);
+
+        JButton topping1Button = new JButton("Whipped cream");
+        topping1Button.setBounds(40, 310, 100, 50);
+        panel.add(topping1Button);
+
+        JButton topping2Button = new JButton("Stars");
+        topping2Button.setBounds(150, 310, 100, 50);
+        panel.add(topping2Button);
+
+        JButton sendButton = new JButton("Send!!! ><");
+        sendButton.setBounds(260, 310, 100, 50);
+        panel.add(sendButton);
+
+        JButton trashButton = new JButton("Trash :C");
+        trashButton.setBounds(370, 310, 100, 50);
+        panel.add(trashButton);
+
+        Cup myCup = new Cup();
+        cupLabel.addMouseMotionListener(new MouseMotionAdapter() {
+        public void mouseDragged(MouseEvent e) {
+        cupLabel.setLocation(
+            cupLabel.getX() + e.getX() - cupLabel.getWidth() / 2,
+            cupLabel.getY() + e.getY() - cupLabel.getHeight() / 2
+                );
+            }
+        });
+
+        base1Button.addActionListener(e ->{
+            myCup.chooseBase(1);
+        });
+
+        base2Button.addActionListener(e ->{
+            myCup.chooseBase(2);
+        });
+
+        syrup1Button.addActionListener(e ->{
+            myCup.chooseSyrup(1);
+        });
+
+        syrup2Button.addActionListener(e ->{
+            myCup.chooseSyrup(2);
+        });
+
+        topping1Button.addActionListener(e ->{
+            myCup.chooseTopping(1);
+        });
+
+        topping2Button.addActionListener(e ->{
+            myCup.chooseTopping(2);
+        });
+
+        sendButton.addActionListener(e ->{
+            if (myCup.toppingType != 0) {
+                myCup.clear();
+            }
+        });
+
+        trashButton.addActionListener(e ->{
+            myCup.clear();
+        });
+
+    
+    frame.setVisible(true);
+    }
+
+        public static class Cup {
+
             public int baseType;
             public int syrupType;
             public int toppingType;
-            public boolean holdingCup;
-            public Point base1;
-            public Point base2;
-            public Point syrup1;
-            public Point syrup2;
-            public Point topping1;
-            public Point topping2;
-            public Point mouseselect;
 
-            {
+            public Cup() {
                 baseType = 0;
                 syrupType = 0;
                 toppingType = 0;
-                base1 = (60, 300);
-                base2 = (120, 300);
-                syrup1 = (180, 300);
-                syrup2 = (240, 300);
-                topping1 = (300, 300);
-                topping2 = (360, 300);
-                mouseselect = (0, 0);
             }
-
 
             public void draw() {
-                Cup.makevisible();
-                    if (baseType == 1) {
-                    cupB1.makevisible();
-                    }
-                    if (baseType == 2) {
-                    cupB2.makevisible();
-                    }
-                    if (baseType == 1 && syrupType == 1) {
-                    cupB1S1.makevisible();
-                    }
-                    if (baseType == 2 && syrupType == 1) {
-                    cupB2S1.makevisible();
-                    }
-                    if (baseType == 1 && syrupType == 2) {
-                    cupB1S2.makevisible();
-                    }
-                    if (baseType == 2 && syrupType == 2) {
-                    cupB2S2.makevisible();
-                    }
-                    if (baseType == 1 && syrupType == 1 && toppingType == 1) {
-                    cupB1S1T1.makevisible();
-                    }
-                    if (baseType == 1 && syrupType == 2 && toppingType == 1) {
-                    cupB1S2T1.makevisible();
-                    }
-                    if (baseType == 1 && syrupType == 1 && toppingType == 2) {
-                    cupB1S1T2.makevisible();
-                    }
-                    if (baseType == 1 && syrupType == 2 && toppingType == 2) {
-                    cupB1S2T2.makevisible();
-                    }
-                    if (baseType == 2 && syrupType == 1 && toppingType == 2) {
-                    cupB2S1T2.makevisible();
-                    }
-                    if (baseType == 2 && syrupType == 1 && toppingType == 1) {
-                    cupB2S1T1.makevisible();
-                    }
-                    if (baseType == 2 && syrupType == 2 && toppingType == 1) {
-                    cupB2S2T1.makevisible();
-                    }
-                    if (baseType == 2 && syrupType == 2 && toppingType == 2) {
-                    cupB2S2T2.makevisible();
-                    }
-            }
-
-            public void pickUpCup() {
-                if (mouseselect == Cup||CupB1||cupB2||cupB1S1||cupB1S2||cupB2S1||cupB2S2||cupB1S1T1||cupB1S2T1||cupB1S2T2||cupB1T1T2||cupB2S1T2||cupB2S2T1||cupB2S2T2||cupB2S1T1) {
-                    holdingCup = true;
+                ImageIcon image = Cup;
+                
+                if (baseType == 1 && syrupType == 0 && toppingType == 0){
+                    image = cupB1;
                 }
-                    if (key.press == "F") {
-                        holdingCup = false;
-                        movedown.speed = ("gravity equation");
-                    }
+                if (baseType == 2 && syrupType == 0 && toppingType == 0){
+                    image = cupB2;
+                }
+                if (baseType == 1 && syrupType == 1 && toppingType == 0){
+                    image = cupB1S1;
+                }
+                if (baseType == 1 && syrupType == 2 && toppingType == 0){
+                    image = cupB1S2;
+                }
+                if (baseType == 2 && syrupType == 1 && toppingType == 0){
+                    image = cupB2S1;
+                }
+                if (baseType == 2 && syrupType == 2 && toppingType == 0){
+                    image = cupB2S2;
+                }
+                if (baseType == 1 && syrupType == 1 && toppingType == 1){
+                    image = cupB1S1T1;
+                }
+                if (baseType == 1 && syrupType == 1 && toppingType == 2){
+                    image = cupB1S1T2;
+                }
+                if (baseType == 1 && syrupType == 2 && toppingType == 1){
+                    image = cupB1S2T1;
+                }
+                if (baseType == 1 && syrupType == 2 && toppingType == 2){
+                    image = cupB1S2T2;
+                }
+                if (baseType == 2 && syrupType == 1 && toppingType == 1){
+                    image = cupB2S1T1;
+                }
+                if (baseType == 2 && syrupType == 1 && toppingType == 2){
+                    image = cupB2S1T2;
+                }
+                if (baseType == 2 && syrupType == 2 && toppingType == 1){
+                    image = cupB2S2T1;
+                }
+                if (baseType == 2 && syrupType == 2 && toppingType == 2){
+                    image = cupB2S2T2;
+                }
+                cupLabel.setIcon(image);
             }
 
-            public void chooseBase() {
-                if (mouseselect == base1 && holdingCup == true) {
-                    baseType = 1;
+
+            public void chooseBase(int type) {
+                    baseType = type;
                     draw();
-                }
-                if (mouseselect() == base2) {
-                    baseType = 2;
+            }
+
+            public void chooseSyrup(int type) {
+                if (baseType != 0) {
+                    syrupType = type;
                     draw();
                 }
             }
 
-            public void chooseSyrup() {
-                if (mouseselect == syrup1) {
-                    syrupType = 1;
+            public void chooseTopping(int type) {
+                if (baseType != 0 && syrupType != 0) {
+                    toppingType = type;
                     draw();
-                }
-                if (mouseselect() == syrup2) {
-                    syrupType = 2;
-                    draw();
-                }
-            }
-           
-            public void chooseTopping() {
-                if (mouseselect == topping1) {
-                    toppingType = 1;
-                    draw();
-                }
-                if (mouseselect == topping2) {
-                    toppingType = 2;
-                    draw();
-                }
-            }
-            
-
-            public void clear() {
-                if (mouseselct == trashbin || send && toppingType != 0) {
-                    cup.makeinvisible();
                 }
             }
 
-
+            public void clear() {
+                baseType = 0;
+                syrupType = 0;
+                toppingType = 0;
+                cupLabel.setIcon(Cup);
         }
+    }
 }
